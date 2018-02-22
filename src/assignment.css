@@ -1,9 +1,7 @@
-body {
-  margin: 0;
-  padding: 20px;
-  font-family: sans-serif;
-}
 
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script|Josefin+Slab|Kaushan+Script|Pacifico|Play|Poiret+One|Questrial|Shadows+Into+Light');
 h1{
   text-align: center;
 }
@@ -12,7 +10,7 @@ h1{
   margin: 0;
   display: flex;
   flex-flow: row wrap; /*shortcut: flex-direction and flex-wrap*/
-  justify-content: space-around;
+  justify-content:center;
 }
 
 .flex-item {
@@ -20,10 +18,26 @@ h1{
   margin: 5px;
   padding: 20px 20px 20px 20px;
   font-size: 18px;
+  background-color:#a4b0be;
+
 }
 
 table, td, th {
     border-collapse: collapse;
     border: 1px solid black;
     padding: 15px;
+}
+.imageDisplay{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.mainpagetitle{
+  font-family: 'Questrial', sans-serif;
+  font-size:90px;
+  color:;
+}
+
+#table{
+  background-color:#ffffff; 
 }
