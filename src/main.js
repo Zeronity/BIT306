@@ -316,7 +316,7 @@ class ProductList extends React.Component {
 
     this.state.items.forEach((item, index) => {
       if (item.name.indexOf(filterText) === -1) {
-        return;
+        return ;
       }
       if (food && item.category!='Food') {
         return;
@@ -402,12 +402,10 @@ class ProductDetails extends React.Component {
     item.image=item.image.replace("C:\\fakepath\\", "src\\img\\");
     return (
       <div>
-        <div> <img src={item.image} /> </div>
+        <div className='imageDisplay'> <img src={item.image} height='350px' width='350px'/> </div>
         <br/>
         <p> Name : {item.name} </p>
-        <label> Description :
-        <p> {item.description} </p>
-        </label>
+        <p> Description:{item.description} </p>
         <p> Category : {item.category} </p>
         <p> Price : {item.price} </p>
         <p> Quantity : {item.quantity} </p>
@@ -556,7 +554,7 @@ class FilterableProductTable extends React.Component {
 
 ReactDOM.render(
   <div>
-  <h1>666 Mart</h1>
+  <h1 className="mainpagetitle">666 Mart</h1>
   <div className="flex-container">
   <div className="flex-item">
   <h2>Product Form</h2>
