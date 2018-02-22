@@ -273,14 +273,14 @@ class ProductRow extends React.Component {
         <td>{item.category}</td>
         <td>{item.price}</td>
         <td>{item.quantity}</td>
-        <td><button type="button" onClick={this.onDeleteClick.bind(this)}
+        <td><button id='delBtn' type="button" onClick={this.onDeleteClick.bind(this)}
            style={{textDecoration: 'none'}}>
          Delete</button>
          &nbsp;&nbsp;
-          <button type="button" onClick={this.onUpdateClick.bind(this)}>
+          <button id='updateBtn' type="button" onClick={this.onUpdateClick.bind(this)}>
           Update</button>
           &nbsp;&nbsp;
-          <button type="button" onClick={this.onViewClick.bind(this)}>
+          <button id='viewBtn' type="button" onClick={this.onViewClick.bind(this)}>
            View</button>
         </td>
       </tr>

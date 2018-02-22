@@ -72,3 +72,21 @@ background-color: #f1f2f6;
   font-size: 18px;
   background-color: #f1f2f6;
 }
+
+#delBtn{
+  font-family:'Questrial', sans-serif;
+  font-size: 12px;
+  background-color: #f1f2f6;
+}
+
+#updateBtn{
+  font-family:'Questrial', sans-serif;
+  font-size: 12px;
+  background-color: #f1f2f6;
+}
+
+#viewBtn{
+  font-family:'Questrial', sans-serif;
+  font-size: 12px;
+  background-color: #f1f2f6;
+}
