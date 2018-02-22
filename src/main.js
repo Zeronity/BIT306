@@ -148,7 +148,7 @@ class ClearButton extends React.Component {
   }
   render() {
     return (
-      <button onClick={this.onClearClick.bind(this)}> Clear </button>
+      <button id='clearBtn' onClick={this.onClearClick.bind(this)}> Clear </button>
     );
   }
   }
@@ -159,7 +159,7 @@ class ClearButton extends React.Component {
     }
     render(){
       return(
-        <button onClick={this.onFilterLowClick.bind(this)}> &darr; Price </button>
+        <button id="lowPriceBtn" onClick={this.onFilterLowClick.bind(this)}> &darr; Price </button>
       );
     }
   }
@@ -170,7 +170,7 @@ class ClearButton extends React.Component {
     }
     render(){
       return(
-        <button onClick={this.onFilterHighClick.bind(this)}> &uarr; Price </button>
+        <button id='highPriceBtn' onClick={this.onFilterHighClick.bind(this)}> &uarr; Price </button>
       );
     }
   }
@@ -218,7 +218,7 @@ class AddProductForm extends React.Component {
       <br/><br/>
       <label>
       Image : &nbsp;
-        <input name="image" type="file" value={this.state.image} onChange={this.handleInputChange} accept="image/*"  required/>
+        <input id='picInputBtn' name="image" type="file" value={this.state.image} onChange={this.handleInputChange} accept="image/*"  required/>
       </label>
       <br/><br/>
       <label>
@@ -343,7 +343,7 @@ class ProductList extends React.Component {
     if (!items.length) {
       return (
         <p>
-          <i>Empty product. Please add product!</i>
+          <i>Empty product list. Please add a product!</i>
         </p>
       );
     }
@@ -393,9 +393,9 @@ class ProductDetails extends React.Component {
     if (item==null) {
       return (
         <div>
-          <i>None product selected !</i>
+          <i>No product selected !</i>
           <br/><br/>
-          <img src="src\img\question.jpg" />
+          <img height='250px' width='300px' src="src\img\magnifier1.png" />
         </div>
       );
     }
@@ -404,11 +404,11 @@ class ProductDetails extends React.Component {
       <div>
         <div className='imageDisplay'> <img src={item.image} height='350px' width='350px'/> </div>
         <br/>
-        <p> Name : {item.name} </p>
-        <p> Description:{item.description} </p>
-        <p> Category : {item.category} </p>
-        <p> Price : {item.price} </p>
-        <p> Quantity : {item.quantity} </p>
+        <p><img src='src/img/staricon.png' height='20px' width='20px'/> Name : {item.name} </p>
+        <p><img src='src/img/staricon.png' height='20px' width='20px'/> Description:{item.description} </p>
+        <p><img src='src/img/staricon.png' height='20px' width='20px'/> Category : {item.category} </p>
+        <p><img src='src/img/staricon.png' height='20px' width='20px'/> Price : {item.price} </p>
+        <p><img src='src/img/staricon.png' height='20px' width='20px'/> Quantity : {item.quantity} </p>
       </div>
     );
   }

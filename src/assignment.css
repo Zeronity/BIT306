@@ -45,5 +45,30 @@ table, td, th {
   background-color:#ffffff;
 }
 #addBtn{
+font-family:'Questrial', sans-serif;
+font-size: 18px;
+background-color: #f1f2f6;
+}
 
+#picInputBtn{
+  font-family:'Questrial', sans-serif;
+  font-size: 14px;
+  background-color: #f1f2f6;
+}
+
+#clearBtn{
+  font-family:'Questrial', sans-serif;
+  font-size: 18px;
+  background-color: #f1f2f6;
+}
+
+#lowPriceBtn{
+  font-family:'Questrial', sans-serif;
+  font-size: 18px;
+  background-color: #f1f2f6;
+}
+#highPriceBtn{
+  font-family:'Questrial', sans-serif;
+  font-size: 18px;
+  background-color: #f1f2f6;
 }
