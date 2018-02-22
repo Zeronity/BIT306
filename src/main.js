@@ -241,7 +241,7 @@ class AddProductForm extends React.Component {
         <input name="quantity" type="number" value={this.state.quantity} onChange={this.handleInputChange} required/>
       </label>
         <br/><br/>
-        <input type="submit" value="Add" />
+        <input type="submit" value="Add" id='addBtn' />
       </form>
     );
   }
@@ -554,7 +554,7 @@ class FilterableProductTable extends React.Component {
 
 ReactDOM.render(
   <div>
-  <h1 className="mainpagetitle">666 Mart</h1>
+  <h1 className="mainpagetitle"><img src='src/img/title.png' height='250px'/></h1>
   <div className="flex-container">
   <div className="flex-item">
   <h2>Product Form</h2>
