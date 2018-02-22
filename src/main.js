@@ -32,11 +32,15 @@ function deleteProduct(index) {
   };
 }
 
-function updateProduct(index,description) {
+
+function updateProduct(index,name,description,price,quantity) {
   return {
     type: 'UPDATE_PRODUCT',
     index: index,
-    description: description
+    name:name,
+    description: description,
+    price:price,
+    quantity:quantity
   };
 }
 
@@ -90,19 +94,17 @@ function productApp(state, action) {
       });
 
     case 'UPDATE_PRODUCT':
-    var description = prompt("Please enter new description for updating this product", action.description);
+    var name = prompt("Please enter new name for this product", action.name);
+    var description = prompt("Please enter new description for this product", action.description);
+    var price = prompt("Please enter new price for this product", action.price);
+    var quantity = prompt("Please enter new quantity for this product", action.quantity);
     var newState = Object.assign({}, state);
+    newState.product.items[action.index].name=name;
     newState.product.items[action.index].description=description;
+    newState.product.items[action.index].price=price;
+    newState.product.items[action.index].quantity=quantity;
     return newState;
-    /*
-      var product = Object.assign({}, state.product.items[action.index], {description: action.description});
-      var items = [].concat(state.product.items);
-      return Object.assign({}, state, {
-          products: {
-            items: items.slice(0,action.index).concat(product).concat(items.slice(action.index+1))
-          }
-      });
-*/
+
     case 'CLEAR_PRODUCT':
       var newState = Object.assign({}, state);
       newState.product.items = [];
@@ -253,7 +255,7 @@ class ProductRow extends React.Component {
   }
 
   onUpdateClick() {
-    store.dispatch(updateProduct(this.props.index, this.props.description));
+    store.dispatch(updateProduct(this.props.index, this.props.name, this.props.description, this.props.price, this.props.quantity));
     alert('Update successfully');
   }
 
@@ -330,7 +332,10 @@ class ProductList extends React.Component {
         key={index}
         item={item}
         index={index}
+        name={item.name}
         description={item.description}
+        price={item.price}
+        quantity={item.quantity}
         />
     );
     });
@@ -551,7 +556,7 @@ class FilterableProductTable extends React.Component {
 
 ReactDOM.render(
   <div>
-  <h1>BIT306</h1>
+  <h1>666 Mart</h1>
   <div className="flex-container">
   <div className="flex-item">
   <h2>Product Form</h2>
