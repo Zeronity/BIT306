@@ -99,6 +99,18 @@ function productApp(state, action) {
     var price = prompt("Please enter new price for this product", action.price);
     var quantity = prompt("Please enter new quantity for this product", action.quantity);
     var newState = Object.assign({}, state);
+    if(name==null){
+      name=action.name;
+    }
+    if(description==null){
+      description=action.description;
+    }
+    if(price==null){
+      price=action.price;
+    }
+    if(quantity==null){
+      quantity=action.quantity;
+    }
     newState.product.items[action.index].name=name;
     newState.product.items[action.index].description=description;
     newState.product.items[action.index].price=price;
